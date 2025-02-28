@@ -1,6 +1,16 @@
-a= 10
-while(a <= 0): 
-	if a == 5: 
-		print(a) 
-	a += 1
-print("exited") 
+def example(x):
+    if x > 0:
+        for i in range(x):
+            if i % 2 == 0:
+                print(f"Even: {i}")
+            else:
+                print(f"Odd: {i}")
+    else:
+        while x < 0:
+            print(f"Negative: {x}")
+            x += 1
+
+    if x > 10:
+        print("Done")
+    else:
+        print("Not Done")
