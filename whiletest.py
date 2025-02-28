@@ -14,3 +14,6 @@ def example(x):
         print("Done")
     else:
         print("Not Done")
+
+if __name__ == "__main__":
+    example(5)
