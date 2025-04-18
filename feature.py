@@ -12,25 +12,25 @@
 #             if child.rid not in visited:  # 無限ループを防ぐ
 #                 count += dfs(child, visited | {child.rid})
 #         return count
-    
+
 #     return dfs(start_node, {start_node.rid})
 
 # def count_paths_topological(cfg):
 #     """ トポロジカルソートを用いて、各ノードへのパス数を計算 """
 #     in_degree = {node.rid: 0 for node in cfg.values()}
 #     path_count = {node.rid: 0 for node in cfg.values()}
-    
+
 #     # 入次数を計算
 #     for node in cfg.values():
 #         for child in node.children:
 #             in_degree[child.rid] += 1
-    
+
 #     # トポロジカルソート
 #     queue = [node for node in cfg.values() if in_degree[node.rid] == 0]
-    
+
 #     # 開始ノードにパスを 1 つ設定
 #     start_node = queue[0]
-#     path_count[start_node.rid] = 1  
+#     path_count[start_node.rid] = 1
 
 #     while queue:
 #         node = queue.pop(0)
@@ -39,7 +39,7 @@
 #             in_degree[child.rid] -= 1
 #             if in_degree[child.rid] == 0:
 #                 queue.append(child)
-    
+
 #     # 最後のノードのパス数を返す
 #     end_node = max(cfg.values(), key=lambda x: x.rid)
 #     return path_count[end_node.rid]
@@ -425,7 +425,7 @@ if __name__ == "__main__":
     # GUI で表示
     root = tk.Tk()
     root.title("制御フローグラフ")
-    img1 = Image.open(args.pythonfile + ".png")  
+    img1 = Image.open(args.pythonfile + ".png")
     img1 = img1.resize((800, 600), Image.LANCZOS)
     img = ImageTk.PhotoImage(img1)
 
